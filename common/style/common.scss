@@ -1,0 +1,271 @@
+	view,
+	scroll-view,
+	swiper,
+	swiper-item,
+	cover-view,
+	cover-image,
+	icon,
+	text,
+	rich-text,
+	progress,
+	button,
+	checkbox,
+	form,
+	input,
+	label,
+	radio,
+	slider,
+	switch,
+	textarea,
+	navigator,
+	audio,
+	camera,
+	image,
+	video {
+		box-sizing: border-box;
+	}
+	
+	page{
+		background-color: #f2f2f2;
+	}
+	
+	/* 骨架屏替代方案 */
+	.Skeleton {
+		background: #f3f3f3;
+		padding: 20upx 0;
+		border-radius: 8upx;
+	}
+
+	/* 图片载入替代方案 */
+	.image-wrapper {
+		font-size: 0;
+		background: #f3f3f3;
+		border-radius: 4px;
+
+		image {
+			width: 100%;
+			height: 100%;
+			transition: .6s;
+			opacity: 0;
+
+			&.loaded {
+				opacity: 1;
+			}
+		}
+	}
+ //超过省略号
+	.clamp { 
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		display: block;
+	}
+
+	.common-hover {
+		background: #f5f5f5;
+	}
+
+	/*边框*/
+	.b-b:after,
+	.b-t:after {
+		position: absolute;
+		z-index: 3;
+		left: 0;
+		right: 0;
+		height: 0;
+		content: '';
+		transform: scaleY(.5);
+		border-bottom: 1px solid $border-color-base;
+	}
+
+	.b-b:after {
+		bottom: 0;
+	}
+
+	.b-t:after {
+		top: 0;
+	}
+
+	/* button样式改写 */
+	uni-button,
+	button {
+		height: 80upx;
+		line-height: 80upx;
+		font-size: $font-lg + 2upx;
+		font-weight: normal;
+
+		&.no-border:before,
+		&.no-border:after {
+			border: 0;
+		}
+	}
+
+	uni-button[type=default],
+	button[type=default] {
+		color: $font-color-dark;
+	}
+
+	/* input 样式 */
+	.input-placeholder {
+		color: #999999;
+	}
+
+	.placeholder {
+		color: #999999;
+	}
+	
+	.hightlight-theme-btn{
+	    cursor: pointer;
+	    &:active{
+	        background: #264393;
+	        // color: #ff;
+	    }
+	}
+	
+	/* 原子类 */
+	.u-relative{ position: relative; }
+	.u-absolute{ position: absolute; }
+	.u-p20{padding: 20rpx;}
+	.u-m20{margin: 20rpx;}
+	.u-mt20{ margin-top: 20rpx;}
+	.u-mb20{ margin-bottom: 20rpx;}
+	.u-mb10{ margin-bottom: 10rpx;}
+	.u-mb30{ margin-bottom: 30rpx;}
+	.u-mb40{ margin-bottom: 40rpx; }
+	.u-mb60{ margin-bottom: 60rpx; }
+	.u-mb100{ margin-bottom: 100rpx; }
+	.u-mr20{ margin-right: 20rpx;}
+	.u-mr10{ margin-right: 10rpx;}
+	.u-mr5{ margin-right: 5rpx;}
+	.u-mt5{ margin-top: 5rpx;}
+	.u-mb5{ margin-bottom: 5rpx;}
+	.u-mt30{ margin-top: 30rpx; }
+	.u-mt10{ margin-top: 10rpx; }
+	.u-mt15{ margin-top: 15rpx; }
+	.u-ml5{ margin-left: 5rpx; }
+	.u-ml10{ margin-left: 10rpx; }
+	.u-ml20{ margin-left: 20rpx; }
+	.u-ml30{ margin-left: 30rpx; }
+	.u-mr30{ margin-right: 30rpx; }
+	.u-mr50{ margin-right: 50rpx; }
+	.u-p30{padding: 30rpx;}
+	.u-whfull{ width: 100%; height: 100%; }
+	.u-whfill{width: 100vw;height:100vh;}
+	.u-wfull{ width: 100%; }
+	.u-bgwhite{ background: #fff; }
+	.u-br10{border-radius: 10rpx;}
+	.u-br20{border-radius: 20rpx;}
+	.u-br40{border-radius: 40rpx;}
+	.u-br100{border-radius: 100rpx;}
+	.u-br4{border-radius: 4rpx;}
+	.u-nowrap{ white-space: nowrap }
+	.u-flex-wrap{flex-wrap: wrap;}
+	.u-bgf2{ background: #f2f2f2 }
+	.u-bg-333{ background: #333; }
+	.u-bg-ccc{ background: #ccc; }
+	.u-bg-e5 { background: #E5E5E5;}
+	.u-pt20 { padding-top: 20rpx;}
+	.u-pb20 { padding-bottom: 20rpx;}
+	.u-plr48{ padding-left: 48rpx; padding-right: 48rpx; }
+	.u-plr20{ padding-left: 20rpx; padding-right: 20rpx; }
+	.u-plr10{ padding-left: 10rpx; padding-right: 10rpx; }
+	.u-plr24{ padding-left: 24rpx; padding-right: 24rpx; }
+	.u-ptb10{ padding-top: 10rpx; padding-bottom: 10rpx; }
+	.u-ptb5{ padding-top: 5rpx; padding-bottom: 5rpx; }
+	.u-bg-theme{ background: #567AD3; }
+	.u-bg-blue {background:#639ece;}
+
+	.u-bg-theme-light{ background: #D7B392; }
+	.u-bg-grey{ background: #B9B9B9;}
+	.u-bg-wx{ background: #57B632;}
+	.u-border-color-theme{ border-color: #B69674; }
+	.u-border-grey{ border: 1px solid #CCCCCC; }
+	.u-border-e5{ border: 1px solid #e5e5e5; }
+	.u-border-bottom-e5{ border-bottom: 1px solid #e5e5e5; }
+	.u-color-white{ color: #fff; }
+	.u-color-999{ color: #999999; }
+	.u-color-666{ color: #666666; }
+	.u-color-333{ color: #333333; }
+	.u-color-e25{ color: #E25E5C;}
+	.u-color-fefefe{ color: #fefefe; }
+	.u-color-theme{ color: #B69674; }
+	.u-color-ccc{color: #ccc}
+	.u-color-wx{color: #57B632}
+	.u-weight-500{ font-weight: 500; }
+	.u-weight-700{ font-weight: 700; }
+	.u-weight-bold{ font-weight: bold;}
+	.u-size-28{ font-size: 28rpx; }
+	.u-size-22{ font-size: 22rpx; }
+	.u-size-24{ font-size: 24rpx; }
+	.u-size-26{ font-size: 26rpx; }
+	.u-size-28{font-size: 28rpx;}
+	.u-size-30{ font-size: 30rpx; }
+	.u-size-32{ font-size: 32rpx; }
+	.u-size-34{ font-size: 34rpx; }
+	.u-size-38{ font-size: 38rpx; }
+	.u-size-40{ font-size: 40rpx; }
+	.u-size-44{ font-size: 44rpx; }
+	.u-size-50{ font-size: 50rpx; }
+	.u-size-72{ font-size: 72rpx; }
+	.u-size-120{ font-size: 120rpx; }
+	
+	.u-text-r { text-align: right;}
+	.u-text-l { text-align: left;}
+	.u-text-c { text-align: center;}
+	.u-scale7 {transform: scale(0.7,0.7)}
+	.u-scale8 {transform: scale(0.8)}
+	.u-scale9 {transform: scale(0.9)}
+	.u-dec-line { text-decoration: line-through;}
+	.u-dec-underline { text-decoration: underline;}
+
+	.u-active {
+		background: #B69674 !important;
+		color: #fff !important;
+	}
+	
+	//通用样式
+	.flex {
+		display: flex;
+	}
+	.u-disabled{cursor: not-allowed; opacity: 0.5}
+	.u-fl{float: left}
+	.u-fr{float: right}
+	.u-clear::after{ overflow: hidden; }
+	.u-flex-1{flex: 1}
+	.u-overlay{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.7);
+		z-index: 2001;
+	}
+	.u-panel-auto{
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.u-bg-f5{background-color: #f5f5f5;}
+	.u-bg-f2{background-color: #f2f2f2;}
+	.u-bg-orange{background-color: #ED731F;}
+	.u-hfull{height: 100%}
+	.u-wfull{width: 100%}
+	.u-size-20{font-size: 20rpx;}
+	.u-size-42{font-size: 42rpx;}
+	.u-pl30{padding-left: 30rpx;}
+	.u-ptb30{padding-top: 30rpx; padding-bottom: 30rpx;}
+	.u-hidden{overflow: hidden;}
+	.u-middle {vertical-align: middle;}
+	.u-mt15{margin-top: 15rpx;}
+	.u-bg-f5{background-color: #f2f2f2;}
+	.u-mb15{margin-bottom: 15rpx;}
+	.u-mr15{margin-right: 15rpx;}
+	.u-border-theme{border: 1px solid #B69674;}
+	.u-border-999{border: 1px solid #999;}
+	.u-line-through{text-decoration:line-through}
+	.u-size-18{font-size: 18rpx;}
+	.u-bg-999{background-color: #999;}

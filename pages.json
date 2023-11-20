@@ -1,0 +1,32 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/main/home",
+			"style": {
+				"navigationBarTitleText": "领取首页"
+			}
+		},{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "领取登录"
+			}
+		},{
+			"path": "pages/result/result",
+			"style": {
+				"navigationBarTitleText": "领取结果"
+			}
+		}
+	],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#ffffff",
+		"backgroundColor": "#000000"
+	}
+}

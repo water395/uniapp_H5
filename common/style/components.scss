@@ -1,0 +1,53 @@
+/*
+* 组件样式
+*/ 
+
+/*
+* 按钮样式 
+*/
+
+// info 按钮
+.button-info{
+	height: 80rpx;
+	color: #333;
+	font-size: 28rpx;
+	background: #1989fa;
+	border-radius: 5rpx;
+	text-align: center;
+	line-height: 80rpx;
+	padding: 0 25rpx;
+}
+
+
+/*
+* 固定定位全屏
+*/
+.fixed-full-screen{
+	position: fixed;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	z-index: 100;
+}
+.absolute-auto {
+	@include absolute-auto();
+}
+
+/*
+* banner 横向滚动功能
+*/
+.banner-box{
+	.iscroll-box{
+		padding: 28rpx 48rpx;
+	}
+}
+
+/*
+* 2行溢出...
+*/
+.text-ellipsis2{
+	@include text-ellipsis(2)
+}
+
+.text-ellipsis1{
+	@include text-ellipsis(1)
+}
